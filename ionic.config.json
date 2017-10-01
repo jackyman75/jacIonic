@@ -1,5 +1,8 @@
 {
   "name": "jacIonic",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "com.jac.ionic",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

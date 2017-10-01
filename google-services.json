@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "829781589616",
+    "firebase_url": "https://jacionic.firebaseio.com",
+    "project_id": "jacionic",
+    "storage_bucket": "jacionic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829781589616:android:89e3446907cea0bf",
+        "android_client_info": {
+          "package_name": "com.jac.ionic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829781589616-ek2p3uf00do6b7g6al74khqb9m37tqqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZDNp5igjO5ZKA8_fMnkoZrod5OxgpWdc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+keytool -genkey -v -keystore jac.keystore -alias jac -keyalg RSA -keysize 2048 -validity 10000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore jac.keystore android-release-unsigned.apk jac
+
+
+d:\Android\sdk\build-tools\25.0.3\zipalign -v 4 android-release-unsigned.apk jacionic.apk

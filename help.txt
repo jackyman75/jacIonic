@@ -1,0 +1,6 @@
+ionic serve
+
+ionic cordova build --release android
+
+ionic cordova run android
+

@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
+// import { Firebase } from '@ionic-native/firebase';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -10,6 +12,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { JacFirebaseProvider } from '../providers/jac-firebase/jac-firebase';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCJJyf0BhEaBxj9MrglBmI2hmQIvgo9Fsk",
+  authDomain: "jacionic.firebaseapp.com",
+  databaseURL: "https://jacionic.firebaseio.com/",
+  projectId: "jacionic",
+  storageBucket: "jacionic.appspot.com",
+  messagingSenderId: "jac"
+};
 
 @NgModule({
   declarations: [
@@ -21,6 +35,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,7 +51,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    JacFirebaseProvider
+    // ,    Firebase
   ]
 })
 export class AppModule {}
