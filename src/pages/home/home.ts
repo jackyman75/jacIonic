@@ -14,7 +14,7 @@ export class HomePage {
   displayName : string;
   constructor(public navCtrl: NavController, public jacFirebase: JacFirebaseProvider, public authProvider: AuthProvider) {
     this.jItems = this.jacFirebase.getItems();
-    this.authProvider.nameOb.subscribe(value => {this.displayName=value;});
+    this.authProvider.nameOb.subscribe(value => {this.displayName=value; this.jItems = this.jacFirebase.getItems();});
   }
 
   addItem() {

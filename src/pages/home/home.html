@@ -9,7 +9,8 @@
 <ion-content>
   <ion-row>
       <ion-item>
-        Hi {{displayName}} <button ion-button (click)="loginFacebook()" *ngIf="displayName=='Anonymous'">Login with Facebook</button> <button ion-button (click)="logout()"  *ngIf="displayName!='Anonymous'">Logout</button>
+        Hi {{displayName}} <button ion-button (click)="loginFacebook()" *ngIf="displayName=='Anonymous'">Login with Facebook</button> 
+        <button ion-button (click)="logout()"  *ngIf="displayName!='Anonymous'">Logout</button>
       </ion-item>
   </ion-row>
 
