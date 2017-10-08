@@ -15,6 +15,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { JacFirebaseProvider } from '../providers/jac-firebase/jac-firebase';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule,AngularFireAuth } from 'angularfire2/auth';
+import { Facebook } from '@ionic-native/facebook';
+import { AuthProvider } from '../providers/auth/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCJJyf0BhEaBxj9MrglBmI2hmQIvgo9Fsk",
@@ -52,7 +55,10 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    JacFirebaseProvider
+    JacFirebaseProvider,
+    AuthProvider,
+    Facebook,
+    AngularFireAuth
     // ,    Firebase
   ]
 })

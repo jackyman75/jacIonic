@@ -8,6 +8,12 @@
 
 <ion-content>
   <ion-row>
+      <ion-item>
+        Hi {{displayName}} <button ion-button (click)="loginFacebook()" *ngIf="displayName=='Anonymous'">Login with Facebook</button> <button ion-button (click)="logout()"  *ngIf="displayName!='Anonymous'">Logout</button>
+      </ion-item>
+  </ion-row>
+
+  <ion-row>
     <ion-col col-9>
       <ion-item>
         <ion-input type="text" [(ngModel)]="newItem" placeholder="New J item"></ion-input>
